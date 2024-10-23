@@ -1,0 +1,12 @@
+#include<stdio.h>
+void main()
+{
+    printf("display all three digit numbers:");
+    for(int i=100;i<=1000;i++)
+    {
+        if(i%5==0 || i%10==0 || i%3==0 || i%4==0)
+         continue;
+        printf(" %d",i);
+        printf("\n");
+    }
+}
