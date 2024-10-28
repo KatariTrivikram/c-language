@@ -1,0 +1,35 @@
+#include<stdio.h>
+#include<string.h>
+char str1[6]="dhoni";
+char str2[6]="indho";
+char sortstring(char str[6])
+{
+   char temp=0;
+   for(int i=0;i<6;i++)
+   {
+       for(int j=i+1;j<6;j++)
+       {
+          if(str[i]>str[j])
+          {
+              temp=str[i];
+              str[i]=str[j];
+              str[j]=temp;
+              
+          }
+       }
+    
+   }
+   return str[6];
+}
+int main()
+{
+
+    sortstring(str1);
+    sortstring(str2);
+    if(strcmp(str1,str2)==0)
+     printf("Both strings are anagrams");//det=ted here letters used same so anagrams
+    else
+     printf("Both strings are not anagrams");
+     return 0;
+}
+
